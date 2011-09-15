@@ -14,7 +14,7 @@ class Input
      */
     public static function url()
     {
-        if (filter_var(trim($_REQUEST['url']), FILTER_VALIDATE_URL)) {
+        if (isset($_REQUEST['url']) && filter_var(trim($_REQUEST['url']), FILTER_VALIDATE_URL)) {
             return filter_var(trim($_REQUEST['url']), FILTER_SANITIZE_URL);
         }
     }
@@ -25,7 +25,7 @@ class Input
      */
     public static function custom()
     {
-        if (preg_match(self::pattern, $_REQUEST['custom'])) {
+        if (isset($_REQUEST['custom']) && preg_match(self::pattern, $_REQUEST['custom'])) {
             return $_REQUEST['custom'];
         }
     }
@@ -36,7 +36,7 @@ class Input
      */
     public static function shortcode()
     {
-        if (preg_match(self::pattern, $_REQUEST['shortcode'])) {
+        if (isset($_REQUEST['shortcode']) && preg_match(self::pattern, $_REQUEST['shortcode'])) {
             return $_REQUEST['shortcode'];
         }
     }
