@@ -33,7 +33,7 @@ class API
         }
     }
 
-    public function addUrl($url, $custom = NULL)
+    public function addUrl($url, $custom = NULL, array $latlong)
     {
         if ($custom) {
             $item = $this->getShortcode($custom);
@@ -50,6 +50,13 @@ class API
             "url" => $url,
             "shortcode" => $code,
         );
+
+        if (!empty($latlong)) {
+            $obj['loc'] = array(
+                'x' => $latlong['lat'],
+                'y' => $latlong['long']
+            );
+        }
 
         $this->collection->insert($obj, array("safe" => true));
 

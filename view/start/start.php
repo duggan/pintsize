@@ -14,6 +14,8 @@ echo <<<HTML
                         <p>
                             <label for="url">Pintsize a URL</label>
                             <textarea class="xxlarge" id="url" name="url"></textarea>
+                            <input type="hidden" name="latitude" id="latitude" />
+                            <input type="hidden" name="longitude" id="longitude" />
                         </p>
                     </div>
                     <div class="row">

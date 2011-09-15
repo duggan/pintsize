@@ -41,5 +41,24 @@ class Input
         }
     }
 
+    /* Latitude
+     *
+     */
+    public static function latitude()
+    {
+        if (isset($_REQUEST['latitude']) && filter_var($_REQUEST['latitude'], FILTER_VALIDATE_FLOAT)) {
+            return $_REQUEST['latitude'];
+        }
+    }
+
+    /* Longitude
+     *
+     */
+    public static function longitude()
+    {
+        if (isset($_REQUEST['longitude']) && filter_var($_REQUEST['longitude'], FILTER_VALIDATE_FLOAT)) {
+            return $_REQUEST['longitude'];
+        }
+    }
 }
 ?>

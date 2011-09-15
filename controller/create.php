@@ -10,8 +10,13 @@ try {
         throw new Exception("Not a valid URL", 400);
     }
 
+    $latlong = array();
+    if (Input::latitude() && Input::longitude()) {
+        $latlong = array('lat' => Input::latitude(), 'long' => Input::longitude());
+    }
+
     $api = new API();
-    $result = $api->addUrl(Input::url(), Input::custom());
+    $result = $api->addUrl(Input::url(), Input::custom(), $latlong);
 
     if (Input::custom() && !$result) {
         $suggestions = array();
