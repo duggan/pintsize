@@ -16,6 +16,16 @@ if (Input::shortcode()) {
     } catch (Exception $e) {
         echo json_encode(array('failure' => $e->getMessage()));
     }
+} else if (Input::latitude() && Input::longitude()) {
+    try {
+        $api = new API();
+        $result = $api->getNear(array('lat' => Input::latitude(), 'long' => Input::longitude()));
+
+        echo json_encode(array('result' => $result));
+
+    } catch (Exception $e) {
+        echo json_encode(array('failure' => $e->getMessage()));
+    }
 } else {
 
     $view = new View();

@@ -33,6 +33,22 @@ class API
         }
     }
 
+    public function getNear(array $latlong)
+    {
+        $query = array(
+            'loc' => array(
+                '$near' => array(
+                    $latlong['lat'], 
+                    $latlong['long']
+                ),
+                '$maxDistance' => 50
+            )
+        );
+        $result = $this->collection->find($query);
+        
+        return $result;
+    }
+
     public function addUrl($url, $custom = NULL, array $latlong)
     {
         if ($custom) {
