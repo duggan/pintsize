@@ -7,8 +7,6 @@
  */
 
 echo <<<HTML
-            <h1>Pintsize <small>URL shortener</small></h1>
-
             <p>
                 <form id="shortener" method="post" action="?r=create" class="form-stacked">
                 

@@ -54,5 +54,7 @@ echo <<<HTML
     <body>
 
     <div class="container">
+            <h1>Pintsize <small>URL shortener</small></h1>
+
 HTML;
 ?>
