@@ -16,7 +16,7 @@ class Router
 
         if (isset($this->get['r']))  {
 
-            $check = split('/', $this->get['r']);
+            $check = explode('/', $this->get['r']);
             foreach ($check as $segment) {
                 if (preg_match('/[a-z0-9_\-]{1,256}/', $segment)) {
                     $clean[] = $segment;
