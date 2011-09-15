@@ -20,8 +20,11 @@ echo <<<HTML
                     </div>
                     <div class="row">
                         <p>
-                            <label for="custom">Custom</label>
+                        <div class="input-prepend">
+                            <label for="custom">Customize</label>
+                            <span class="add-on">http://pintsize.orchestra.io/?r=go&amp;shortcode=</span>
                             <input type="text" class="medium" id="custom" name="custom" />
+                        </div>
                         </p>
                     </div>
                     <div class="row">
