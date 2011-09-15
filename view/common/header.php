@@ -18,7 +18,6 @@ echo <<<HTML
         <script type="text/javascript">
 
             $(document).ready(function(){
-
                 $('form').submit(function(e){
                     e.preventDefault();
                     $.ajax({
@@ -29,7 +28,7 @@ echo <<<HTML
                       success: function(data) {
                           if (data && data.success) {
                               $('.result').html(
-                                  '<form class="form-stacked"><label for="shortlink">Your Pintsized URL:</label><input id="shortlink" class="xxlarge" type="text" value="http://pintsize.orchestra.io/?r=go&shortcode='+ data.success.shortcode +'" /></form>'
+                                  '<form class="form-stacked"><label for="shortlink">Your Pintsized URL:</label><input id="shortlink" class="xxlarge" type="text" value="http://pintsize.orchestra.io/?r=go&shortcode='+ data.success.shortcode +'" /> <a href="http://pintsize.orchestra.io/?r=go&shortcode='+ data.success.shortcode +'">link</a></form>'
                               );
                           } else if (data && data.failure){
                               $('.result').html(
