@@ -19,7 +19,7 @@ if (Input::shortcode()) {
 } else {
 
     $view = new View();
-    $view->add('common/header');
+    $view->add('common/header')->import(array('title' => 'API Help'));
     $view->add('help/api');
     $view->add('common/footer');
     $view->render();
