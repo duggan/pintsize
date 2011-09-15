@@ -39,6 +39,8 @@ class API
             $item = $this->getShortcode($custom);
             if ($item) {
                 return FALSE;
+            } else {
+                $code = $custom;
             }
         } else {
             $code = $this->findAvailable();
