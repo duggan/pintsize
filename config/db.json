@@ -1,9 +1,0 @@
-{
-    "connection_url": "mongodb://ce387501:kqpujk8rjndvciq7c10u15sf9p@dbh43.mongolab.com:27437/orchestra_ce387501_9e210",
-    "database": "orchestra_ce387501_9e210",
-    "hostname": "dbh43.mongolab.com",
-    "port": 27437,
-    "username": "ce387501",
-    "password": "kqpujk8rjndvciq7c10u15sf9p",
-    "collection": "urls"
-}
