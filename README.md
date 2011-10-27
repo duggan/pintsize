@@ -10,7 +10,9 @@ Pintsize
       -----
 
 
-Pintsize is a URL shortener written using PHP 5.3, using MongoDB at the back.
+Pintsize is a URL shortener written from the ground up in one sitting as a code challenge.
+
+It uses PHP 5.3 and MongoDB at the back.
 
 It can generate random URLs, or accept custom URLs (alphanumeric characters).
 
