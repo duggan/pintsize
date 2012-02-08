@@ -12,7 +12,7 @@ echo <<<HTML
                 
                     <div class="row">
                         <p>
-                            <label for="url">Pintsize a URL</label>
+                            <label for="url">Pintsize a URL today!</label>
                             <textarea class="xxlarge" id="url" name="url"></textarea>
                             <input type="hidden" name="latitude" id="latitude" />
                             <input type="hidden" name="longitude" id="longitude" />
