@@ -20,6 +20,7 @@ switch ($route[0]) {
     case 'delete':
     case 'stats':
     case 'api':
+    case 'phpinfo';
         try {
             $controller = new Controller($route[0]);
         } catch (Exception $e) {
