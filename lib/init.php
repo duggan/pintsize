@@ -6,6 +6,7 @@
  */
 
 /* Define the few global constants we want */
+date_default_timezone_set('Europe/Dublin');
 
 // Enable/disable application local debugging - populates Log::getDebug()
 define("APP_LOCAL_DEBUGGING",   TRUE);
