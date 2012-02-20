@@ -40,6 +40,9 @@ class View
     public function render()
     {
         foreach ($this->templates as $key => $path) {
+
+            $import = null;
+
             if (isset($this->imports[$key])) {
                 $import = $this->imports[$key];
             }
