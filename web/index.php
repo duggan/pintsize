@@ -20,7 +20,7 @@ switch ($route[0]) {
     case 'delete':
     case 'stats':
     case 'api':
-    case 'phpinfo';
+    case 'phpinfo':
         try {
             $controller = new Controller($route[0]);
         } catch (Exception $e) {
@@ -28,6 +28,8 @@ switch ($route[0]) {
         }
         break;
     default:
+        Log::notice(sprintf("No such route: '%s'", $route[0]));
+
         $view = new View();
         $view->add('common/header');
         $view->add('error/404');
