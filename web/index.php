@@ -21,6 +21,7 @@ switch ($route[0]) {
     case 'stats':
     case 'api':
     case 'phpinfo':
+    case 'sleep':
         try {
             $controller = new Controller($route[0]);
         } catch (Exception $e) {
