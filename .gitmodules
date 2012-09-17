@@ -1,3 +1,0 @@
-[submodule "web/test"]
-	path = web/test
-	url = git://github.com/duggan/Test.git
